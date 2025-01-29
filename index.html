@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Management</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.angularjs.org/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="employeeApp" ng-controller="employeeController">
+  <div class="container">
+    <h1>Employee Management</h1>
+    
+    <!-- Add Employee Form -->
+    <div class="form-container">
+      <h2>Add Employee</h2>
+      <form ng-submit="addEmployee()">
+        <input type="number" ng-model="newEmployee.id" placeholder="ID" required><br>
+        <input type="text" ng-model="newEmployee.name" placeholder="Name" required><br>
+        <input type="text" ng-model="newEmployee.position" placeholder="Position" required><br>
+        <input type="number" ng-model="newEmployee.salary" placeholder="Salary" required><br>
+        <button type="submit">Add Employee</button>
+      </form>
+    </div>
+
+    <!-- Update Employee Form -->
+    <div class="form-container">
+      <h2>Update Employee</h2>
+      <form ng-submit="updateEmployee()">
+        <input type="number" ng-model="updatedEmployee.id" placeholder="Employee ID to update" required><br>
+        <input type="text" ng-model="updatedEmployee.name" placeholder="Updated Name" required><br>
+        <input type="text" ng-model="updatedEmployee.position" placeholder="Updated Position" required><br>
+        <input type="number" ng-model="updatedEmployee.salary" placeholder="Updated Salary" required><br>
+        <button type="submit">Update Employee</button>
+      </form>
+    </div>
+
+    <!-- Delete Employee Form -->
+    <div class="form-container">
+      <h2>Delete Employee</h2>
+      <form ng-submit="deleteEmployee()">
+        <input type="number" ng-model="employeeToDelete.id" placeholder="Employee ID to delete" required><br>
+        <button type="submit">Delete Employee</button>
+      </form>
+    </div>
+
+    <!-- Employee List Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="employee in employees">
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.position }}</td>
+          <td>{{ employee.salary | currency }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

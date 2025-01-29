@@ -1,0 +1,153 @@
+/* Body Styling */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Container Styling */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Header Styling */
+h1 {
+  text-align: center;
+  font-size: 2.8em;
+  color: #444;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2em;
+  color: #444;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+table th {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  padding: 15px;
+  border: none;
+}
+
+table td {
+  padding: 12px;
+  text-align: left;
+  border: none;
+  font-size: 1em;
+  color: #555;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #e6f7ff;
+  cursor: pointer;
+}
+
+/* Form Containers */
+.form-container {
+  background: linear-gradient(to right, #ffffff, #e6e6e6);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input Fields */
+input {
+  font-size: 1rem;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #6a11cb;
+  outline: none;
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.5);
+}
+
+/* Buttons */
+button {
+  font-size: 1.1rem;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  table th, table td {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+
+  h1, h2 {
+    font-size: 1.8em;
+  }
+
+  button, input {
+    font-size: 1rem;
+  }
+}
